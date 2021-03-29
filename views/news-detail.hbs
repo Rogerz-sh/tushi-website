@@ -1,0 +1,25 @@
+<style>
+    body {
+        background-color: #f6f6f6;
+    }
+</style>
+<div class="bg-light-gray">
+    <div class="wrap">
+        <ol class="breadcrumb bg-light-gray">
+            <li class="breadcrumb-item"><a href="/">首页</a></li>
+            <li class="breadcrumb-item"><a href="/news">新闻动态</a></li>
+            <li class="breadcrumb-item active">公司新闻</li>
+        </ol>
+    </div>
+</div>
+<div class="wrap">
+    <div class="news-detail-container">
+        <div class="news-detail-title">{{news_detail.title}}</div>
+        <div class="news-detail-date">{{news_detail.publish_date}}</div>
+        <div class="news-detail-content">
+            {{!-- <p>{{news_detail.subtitle}}</p> --}}
+            {{{news_detail.content}}}
+        </div>
+        
+    </div>
+</div>

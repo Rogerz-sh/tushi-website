@@ -1,0 +1,69 @@
+<div class="wrap bg-light">
+    <div class="focus-container swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="/images/focus/TUSHI.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="/dsp"><img src="/images/focus/DSP.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="/otv"><img src="/images/focus/OTV.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="/ott"><img src="/images/focus/OTT.jpg" width="100%"></a></div>
+            <div class="swiper-slide"><a href="/adx"><img src="/images/focus/ADX.jpg" width="100%"></a></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        {{!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> --}}
+    </div>
+</div>
+<div class="wrap mob-shadow">
+    <div class="mob-head">新闻动态</div>
+    <div class="news-container">
+        <div class="news-aside"><img src="/images/news_title.png" alt=""></div>
+        <div class="news-swiper swiper-container">
+            <div class="swiper-wrapper">
+                {{#each news_list}}
+                <div class="swiper-slide">
+                    <img class="news-image" src="{{cover}}" width="100%">
+                    <p class="news-title">{{title}}</p>
+                    <p class="news-detail"><a href="{{link}}">了解详情</a></p>
+                </div>
+                {{/each}}
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+<div class="wrap bg-light">
+    <div class="mob-head">行业案例</div>
+    <div class="example-container">
+        <div class="example-head">
+            <img src="/images/example_title.png" alt="">
+        </div>
+        <div class="example-swiper swiper-container">
+            <div class="example-content swiper-wrapper">
+                {{#each example_list}}
+                <div class="example-item swiper-slide">
+                    <img class="example-image" src="{{cover}}" width="100%" alt="">
+                    <p class="example-title">{{title}}</p>
+                </div>
+                {{/each}}
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</div>
+<div class="wrap">
+    {{!-- <div class="mob-head">合作伙伴</div> --}}
+    <div class="partner-container">
+        {{!-- <div class="partner-head">
+            <img src="/images/partner_title.png" alt="">
+        </div> --}}
+        <div class="partner-content">
+            <img src="/images/mit.jpg" alt="">
+        </div>
+    </div>
+</div>
+<script src="/js/index.js"></script>

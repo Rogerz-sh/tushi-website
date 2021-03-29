@@ -1,0 +1,36 @@
+<div class="bg-light-gray">
+    <div class="wrap">
+        <ol class="breadcrumb bg-light-gray">
+            <li class="breadcrumb-item"><a href="/">首页</a></li>
+            <li class="breadcrumb-item active">行业案例</li>
+        </ol>
+    </div>
+</div>
+{{!-- <div class="wrap">
+    <div class="tab-container">
+        <button type="button" class="btn btn-sm active">电子商务</button>
+        <button type="button" class="btn btn-sm">生活日化</button>
+        <button type="button" class="btn btn-sm">金融保险</button>
+        <button type="button" class="btn btn-sm">其他</button>
+    </div>
+</div> --}}
+<div class="wrap">
+    <div class="example-list-container">
+        <ul>
+            {{#each example_list}}
+            <li class="example-list-item">
+                <img class="example-list-image" src="{{cover}}" width="80%" alt="">
+                <p>{{title}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('button').click(function () {
+            var text = $(this).text().trim();
+            location.href = '/examples?type=' + text
+        })
+    })
+</script>

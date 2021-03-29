@@ -1,0 +1,77 @@
+<style>
+    .picture {
+        position: relative;
+        display: inline-block;
+        width: 24%;
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+    .picture img {
+        border: 1px solid #ddd;
+        width: 100%;
+        height: 250px;
+
+    }
+
+    .picture .url {
+        word-break: break-all;
+    }
+
+    .picture .time {
+        position: absolute;
+        margin: 0;
+        top: 244px;
+        right: 14px;
+        padding: 3px;
+        background: rgba(0, 0, 0, .5);
+        color: #fff;
+    }
+
+    .picture i {
+        color: #f00;
+        cursor: pointer;
+        float: right;
+        margin-top: 2px;
+        margin-right: 2px;
+    }
+</style>
+<div class="row">
+    <div class="col-xs-12">
+        <ol class="breadcrumb">
+            <li>图片管理</li>
+            <li class="active">图片列表</li>
+        </ol>
+    </div>
+</div>
+<div class="container">
+    <div class="row margin-bottom-10">
+        <div class="col-xs-12">
+            <div class="pull-left form-control-static">上传时间：</div>
+            <div class="pull-left" style="width:110px;"><input type="text" id="sdate" class="form-control input-sm"
+                    style="width:110px;" /></div>
+            <div class="pull-left form-control-static"> ~ </div>
+            <div class="pull-left" style="width:110px;"><input type="text" id="edate" class="form-control input-sm"
+                    style="width:110px;" /></div>
+            <div class="pull-left margin-left-10"><button class="btn btn-info btn-sm" id="search"><i
+                        class="fa fa-search"></i> 查询</button></div>
+            <div class="pull-left margin-left-10"><a class="btn btn-success btn-sm" id="add"><i class="fa fa-plus"></i>
+                    添加图片</a></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="listView"></div>
+            <div id="pager" class="k-pager-wrap"></div>
+        </div>
+    </div>
+</div>
+<script type="text/x-kendo-template" id="template">
+    <div class="picture">        
+        <img src="#:filepath#" alt="#:filename#" title="点击下方链接可看大图" />
+        <a class="url" href="#:filepath.replace(/\\/g, '/')#" target="_blank">#:filepath.replace(/\\/g, "/")#</a>
+        <i class="fa fa-trash-o _del" data-id="#:_id#"></i>
+        <p class="time">#:new Date(created_at).format("yyyy-mm-dd hh:MM")#</p>        
+    </div>
+</script>
+<script type="text/javascript" src="/tushi_manage/scripts/pictures.pictures-list.js"></script>

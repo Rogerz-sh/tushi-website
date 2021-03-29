@@ -1,0 +1,32 @@
+<div class="bg-light-gray">
+    <div class="wrap">
+        <ol class="breadcrumb bg-light-gray">
+            <li class="breadcrumb-item"><a href="/">首页</a></li>
+            <li class="breadcrumb-item active">新闻动态</li>
+        </ol>
+    </div>
+</div>
+{{!-- <div class="wrap">
+    <div class="search-container">
+        <div class="search-input"><input type="text" class="form-control form-control-sm" id="key"></div>
+        <div class="search-btn"><button type="button" class="btn btn-sm btn-outline-secondary">搜索</button></div>
+    </div>
+</div> --}}
+<div class="wrap">
+    <div class="news-list-container">
+        <ul>
+            {{#each news_list}}
+            <li class="news-list-item">
+                <div class="news-list-left">
+                    <p class="news-list-title">{{title}}</p>
+                    <p class="news-list-date">{{publish_date}}</p>
+                    <p class="news-list-content">{{content}}</p>
+                    <p class="news-list-click"><a href="{{link}}">[阅读全文]</a></p>
+                </div>
+                <div class="news-list-right"><img class="news-list-image" src="{{cover}}" width="100%" alt=""></div>
+            </li>
+            {{/each}}
+            
+        </ul>
+    </div>
+</div>

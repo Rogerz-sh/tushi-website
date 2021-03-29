@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/tushi_manage/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/tushi_manage/css/animate.min.css" />
+    <link href="/tushi_manage/css/kendo.common-bootstrap.min.css" rel="stylesheet" />
+    <link href="/tushi_manage/css/kendo.bootstrap.min.css" rel="stylesheet" />
+    <link href="/tushi_manage/css/plugins.css" rel="stylesheet" />
+    <link href="/tushi_manage/css/style.css" rel="stylesheet" />
+    <script src="/tushi_manage/js/jquery.min.js"></script>
+    <script src="/tushi_manage/js/jquery.cookie.js"></script>
+    <script src="/tushi_manage/js/bootstrap.min.js"></script>
+    <script src="/tushi_manage/js/jszip.min.js"></script>
+    <script src="/tushi_manage/js/kendo.all.min.js"></script>
+    <script src="/tushi_manage/js/kendo.culture.zh-CN.min.js"></script>
+    <script src="/tushi_manage/js/kendo.messages.zh-CN.min.js"></script>
+    <script src="/tushi_manage/js/underscore.min.js"></script>
+    <script src="/tushi_manage/js/vue.min.js"></script>
+    <style>
+        body {background: rgba(0,0,0,.3); height: 100%;}
+        .login-ctn {width: 300px; background: #fff; border-radius: 5px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+        .login-panel {padding: 15px;}
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!--<div class="row">
+            <div class="col-xs-12">
+                <h1>这是一个登录页面</h1>
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        Request: http://cloud.bmob.cn/2d1e6b9fd6009d2f/test_union
+                    </div>
+                    <div class="panel-body" id="ctn">
+
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+    <div class="login-ctn" id="ctn">
+        <div class="login-panel">
+            <form onsubmit="return false;">
+                <h4 style="margin:10px auto 20px;text-align:center;">管理员登录</h4>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" class="form-control" id="name" v-model="name" placeholder="请输入用户名">
+                    <!--<span class="help-block red" v-show="name==='' && validating">用户名不能为空</span>-->
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" class="form-control" id="password" v-model="password" placeholder="请输入密码">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="remember" v-model="remember"> 记住我
+                    </label>
+                </div>
+                <button class="btn btn-success" v-on:click="login()" :disabled="name==='' || password===''">登录</button>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/tushi_manage/js/hdtjs/prototype.js"></script>
+    <script type="text/javascript" src="/tushi_manage/js/hdtjs/ajax.js"></script>
+    <script type="text/javascript" src="/tushi_manage/js/hdtjs/dialog.js"></script>
+    <script type="text/javascript" src="/tushi_manage/js/hdtjs/form.js"></script>
+    <script type="text/javascript" src="/tushi_manage/scripts/user.user-login.js"></script>
+</body>
+</html>

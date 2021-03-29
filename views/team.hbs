@@ -1,0 +1,57 @@
+<style>
+    body {
+        background-color: #f6f6f6;
+    }
+</style>
+<div class="bg-light-gray">
+    <div class="wrap">
+        <ol class="breadcrumb bg-light-gray">
+            <li class="breadcrumb-item"><a href="/">首页</a></li>
+            <li class="breadcrumb-item active">关于我们</li>
+            <li class="breadcrumb-item active">管理团队</li>
+        </ol>
+    </div>
+</div>
+<div class="wrap">
+    <div class="team-container">
+        <div class="manager">
+            <div class="managericons">
+                <img src="/images/photo_small4.jpg" id="detail1" class="icons iconshow" />
+                <img src="/images/photo_small5.jpg" id="detail3" class="icons" />
+            </div>
+            <div id="mdetail1" class="managerdetail" style="display:block">
+                <img src="/images/photo_4.jpg" class="managerphoto" />
+                <ul class="managercontent">
+                    <li class="managertitle">图莳数字首席执行官&nbsp;&nbsp;<font class="blue">程浩然</font>
+                    </li>
+                    <li class="managerhistory">中南财经政法大学会计学硕士</li>
+                    <li class="managerhistory">原君创资本管理合伙人</li>
+                    <li class="managerhistory">全面主导图莳数字战略发展与商业运营</li>
+
+                </ul>
+            </div>
+            <div id="mdetail3" class="managerdetail">
+                <img src="/images/photo_5.jpg" class="managerphoto" />
+                <ul class="managercontent">
+                    <li class="managertitle">图莳数字资深副总裁&nbsp;&nbsp;<font class="blue">朱强</font>
+                    </li>
+                    <li class="managerhistory">20年数字广告传播创意及策划营销经验</li>
+                    <li class="managerhistory">曾任职上海智威汤逊、24/7互动传媒亚洲有限公司、wwwins/isobar媒体</li>
+                    <li class="managerhistory">负责展示广告业务及程序化广告平台产品发展及营销</li>
+                </ul>
+            </div>
+
+            <script language="javascript">
+                $(function () {
+                    $(".icons").mouseover(function (e) {
+                        $(".managerdetail").hide();
+                        $(".icons").removeClass("iconshow");
+                        $("#m" + $(this).attr("id")).fadeIn(100);
+                        $(this).addClass("iconshow");
+                    });
+                });
+
+            </script>
+        </div>
+    </div>
+</div>
